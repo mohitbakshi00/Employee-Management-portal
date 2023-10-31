@@ -20,7 +20,7 @@ def add_emp(request):
 
         # create model object and set the data
 
-        e =Emp()
+        e = Emp()
         e.name = emp_name
         e.emp_id = emp_id
         e.department = emp_department
@@ -42,17 +42,21 @@ def add_emp(request):
 
 
 def delete_emp(request,emp_id):
+
     emp = Emp.objects.get(pk=emp_id)
     emp.delete()
     print (emp_id)
+
     return redirect("/emp/home/")
 
 def update_emp(request,emp_id):
+
     emp = Emp.objects.get(pk=emp_id)
    
     return render(request, 'emp/update_emp.html',{'emp':emp})
 
 def do_update_emp(request,emp_id):
+    
     if request.method == 'POST':
         emp_name = request.POST.get('emp_name')
         emp_id_temp = request.POST.get('emp_id')
