@@ -31,12 +31,12 @@
                 {% for emp in emps %}
                 <tr> 
                   <td>{{forloop.counter}}</td>
-                  <td>{{ emp.name}}</td>
-                  <td>{{ emp.emp_id}}</td>
-                  <td>{{ emp.department}}</td>
-                  <td>{{ emp.working}}</td>
-                  <td>{{ emp.phone}}</td>
-                  <td>{{ emp.address}}</td>
+                  <td>{{emp.name}}</td>
+                  <td>{{emp.emp_id}}</td>
+                  <td>{{emp.department}}</td>
+                  <td>{{emp.working}}</td>
+                  <td>{{emp.phone}}</td>
+                  <td>{{emp.address}}</td>
                   <td>
                   <a href="/emp/delete-emp/{{emp.id}}" target="_blank"class="btn btn-warning btn-sm">Delete</a> 
                   <a href="/emp/update-emp/{{emp.id}}" target="_blank"class="btn btn-dark btn-sm">Update</a> 
